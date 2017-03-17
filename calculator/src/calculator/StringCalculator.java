@@ -13,11 +13,9 @@ public class StringCalculator {
 
 	// 다 합친 계산 기능
 	public int calculate(String input) {
-		if (input == null)
+		if (input == null || input.isEmpty()) // 당연히 합쳐서
 			return 0;
-		if (input.isEmpty())
-			return 0;
-
+		
 		splitter[2] = readSplitter(input);
 		input = removeSplitterPart(input);
 		String[] resultStrings = splitInput(input, this.splitter);
